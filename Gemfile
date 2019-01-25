@@ -9,7 +9,10 @@ gem 'puma'
 gem 'rails', '5.2.1'
 gem 'redis'
 gem 'pundit'
+
+# Payment Gems
 gem 'money-rails'
+gem 'stripe'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'

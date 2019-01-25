@@ -1,12 +1,6 @@
-class TeddiesController < ApplicationController
-  skip_before_action :authenticate_user!
-
-  def index
-    @teddies = Teddy.all
-  end
-
+class OrdersController < ApplicationController
   def show
-    @teddy = Teddy.find(params[:id])
+    @order = current_user.orders.where(state: 'paid').find(params[:id])
   end
 
   def create
